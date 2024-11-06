@@ -1,0 +1,6 @@
+venv\scripts\activate
+mypy webscrapper
+py -m unittest discover -v -s webscrapper\tests
+py webscrapper
+pip install -r requirements.txt
+pip uninstall --yes -r requirements.txt

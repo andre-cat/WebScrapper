@@ -1,0 +1,47 @@
+{
+    "cSpell.words": [
+        "chromedriver",
+        "deepl",
+        "Interactable",
+        "openpyxl",
+        "prefs",
+        "sheetnames",
+        "webelement",
+        "webscrapper"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "cSpell.language": "en,en-GB,en-US",
+    "VsCodeTaskButtons.showCounter": false,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "$(symbol-function) Run venv",
+            "task": "Run venv",
+            "tooltip": "Activate virtual environment here"
+        },
+        {
+            "label": "$(symbol-misc) Run MyPy",
+            "task": "Run MyPy",
+            "tooltip": "Analize your code with MyPy"
+        },
+        {
+            "label": "$(beaker) Run tests",
+            "task": "Run tests",
+            "tooltip": "Start all the tests available"
+        },
+        {
+            "label": "$(rocket) Run program",
+            "task": "Run program",
+            "tooltip": "Executes program"
+        },
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./webscrapper/tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+}

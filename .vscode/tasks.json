@@ -1,0 +1,81 @@
+{
+    "version": "3.0.0",
+    "tasks": [
+        {
+            "label": "Run venv",
+            "icon": {
+                "id": "symbol-function"
+            },
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "venv\\scripts\\activate"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run MyPy",
+            "icon": {
+                "id": "symbol-misc"
+            },
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "mypy webscrapper"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Run tests",
+            "icon": {
+                "id": "beaker"
+            },
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "py -m unittest discover -v -s webscrapper\\tests"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run program",
+            "icon": {
+                "id": "rocket"
+            },
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "py webscrapper"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+    ]
+}
