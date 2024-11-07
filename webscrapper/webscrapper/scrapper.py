@@ -142,6 +142,8 @@ class Scrapper:
             Tag | None
         """
 
+        # This method requires to be optimized
+
         text: str = ""
         images: str = ""
         videos: str = ""

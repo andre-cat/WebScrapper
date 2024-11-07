@@ -171,10 +171,10 @@ def scrap(page_start: int = 1, page_end: int = 737) -> None:
                                     browser.open_tab(url)
                                     browser.go_to_tab(2)
 
-                                    # browser.wait_css_present(".company-header>.img")
-                                    # browser.wait_css_present(".title-container>h2")
-                                    # browser.wait_css_present(".address")
-                                    # browser.wait_css_present(".website")
+                                    browser.wait_css_present(".company-header>.img")
+                                    browser.wait_css_present(".title-container>h2")
+                                    browser.wait_css_present(".address")
+                                    browser.wait_css_present(".website")
                                     browser.wait_css_present(".company-detail")
 
                                     browser.delete_scripts()
@@ -266,8 +266,7 @@ def scrap(page_start: int = 1, page_end: int = 737) -> None:
                                 excel.save_book()
                                 Files.copy_file(
                                     f"{file_name}.xlsx",
-                                    f"{
-                                                file_name}_copy.xlsx",
+                                    f"{file_name}_copy.xlsx",
                                 )
 
                     timer.stop_timer()
@@ -387,6 +386,7 @@ def translate() -> None:
     translator: Translator = Translator("zh-CN", "es")
 
     for sheet in excel.sheets:
+
         print(f"{'=' * 5} Sheet {sheet.title} {'=' * 5}")
 
         sheet["N1"] = "translated"
@@ -398,6 +398,8 @@ def translate() -> None:
         for row in range(2, sheet.max_row + 1):
 
             timer.start_timer()
+
+            Files.copy_file(f"{file_name}.xlsx", f"{file_name}_copy.xlsx")
 
             print(f"{'_' * 3} Row {row} {'_' * 3}")
 
@@ -415,8 +417,6 @@ def translate() -> None:
                 sheet[f"P{row}"] = company_translated
 
                 excel.save_book()
-
-                Files.copy_file(f"{file_name}.xlsx", f"{file_name}_copy.xlsx")
 
             timer.stop_timer()
 
